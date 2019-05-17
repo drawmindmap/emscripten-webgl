@@ -1,0 +1,18 @@
+{
+  "name": "emscripten-webgl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.c",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "hs ./docs -p 8080 -s -c-1 -o",
+    "build": "emcc src/main.c -O3 -s USE_WEBGL2=1 -s FULL_ES3=1 -s USE_GLFW=3 -s WASM=1 -o docs/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
